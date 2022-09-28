@@ -9,6 +9,10 @@ export class CreateAccountComponent implements OnInit {
 
   constructor() { }
 
+  onSubmit() {
+    throw new Error('Method not implemented.');
+    }
+
   ngOnInit(): void {
   }
 
