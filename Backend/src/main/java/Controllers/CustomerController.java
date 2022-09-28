@@ -55,6 +55,7 @@ public class CustomerController {
         customers.setUserName(userInput.getUserName());
         customers.setFirstname(userInput.getFirstName());
         customers.setLastname(userInput.getLastName());
+        customers.setPassword(userInput.getPassword());
         Customer updateUser = customerRepo.save(customers);
         return ResponseEntity.ok(updateUser);
 
