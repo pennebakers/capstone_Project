@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  submitted : any;
+  f: any;
+  loading: any;
+  
 onSubmit() {
 throw new Error('Method not implemented.');
 }
