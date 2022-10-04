@@ -8,3 +8,6 @@
   padding: 30px;
   border-radius: 10px;
 }
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
