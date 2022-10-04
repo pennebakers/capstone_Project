@@ -1,8 +1,19 @@
 
+<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 body{
     padding: 0;
     margin: 0;
+=======
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid rgb(11, 89, 153);
+  padding: 30px;
+  border-radius: 10px;
+>>>>>>> 90796c6bd72907d1e8a56da3ffcd89296510423d
 }
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
