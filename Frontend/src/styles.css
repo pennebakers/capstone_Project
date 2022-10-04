@@ -1,1 +1,13 @@
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid rgb(11, 89, 153);
+  padding: 30px;
+  border-radius: 10px;
+}
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
