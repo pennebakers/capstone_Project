@@ -1,6 +1,17 @@
-package Models;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
 
-import javax.persistence.*;
+package com.capstoneProject.capstone.Models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name ="Budgets")
@@ -23,7 +34,7 @@ public class Budget {
     private Double savings;
 
     @ManyToOne
-    private Budget budgets;
+    private Customer customers;
 
     public Budget(){
 
