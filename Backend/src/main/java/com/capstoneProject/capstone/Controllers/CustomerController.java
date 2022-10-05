@@ -70,6 +70,9 @@ public class CustomerController {
         customers.setFirstName(userInput.getFirstName());
         customers.setLastName(userInput.getUsername());
         customers.setEmail(userInput.getEmail());
+        customers.setUserName(userInput.getUserName());
+        customers.setFirstname(userInput.getFirstName());
+        customers.setLastname(userInput.getLastName());
         customers.setPassword(userInput.getPassword());
         Customer updateUser = customerRepo.save(customers);
         return ResponseEntity.ok(updateUser);
