@@ -17,6 +17,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 
 
 @NgModule({
+
   declarations: [
     AppComponent,
     PaymentsPageComponent,
@@ -28,8 +29,10 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     BrowserModule,
     AppRoutingModule
   ],
+
   declarations: [AppComponent, LoanCalculatorComponent, CreateAccountComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgApexchartsModule],
+
   providers: [],
   bootstrap: [AppComponent],
 })
