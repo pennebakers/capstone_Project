@@ -36,26 +36,26 @@ public class CustomerController {
         this.customerRepo = customerRepo;
     }
 
-    @GetMapping("/customer")
+    @GetMapping("fundingforce/customer")
     public List<Customer> list(){
 
         return this.customerRepo.findAll();
     }
 
-    @GetMapping("/customer/{customerId}")
+    @GetMapping("fundingforce/customer/{customerId}")
     public ResponseEntity<Customer> getCustomerById(@PathVariable Long customerId){
         Customer customers = customerRepo.findById(customerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Customer does not exist with id : " + customerId));
         return ResponseEntity.ok(customers);
 
     }
-    @PostMapping("/customer")
+    @PostMapping("fundingforce/customer")
     public Customer createCustomer(@RequestBody Customer customer){
 
         return this.customerRepo.save(customer);
     }
 
-    @DeleteMapping("/customer/{customerId}")
+    @DeleteMapping("fundingforce/customer/{customerId}")
     public ResponseEntity<Map<String, Boolean>> deleteCustomer(@PathVariable Long customerId){
         Customer customer = this.customerRepo.findById(customerId).orElseThrow(() -> new ResourceNotFoundException("User not exist with id : " + customerId));
         this.customerRepo.deleteById(customerId);
@@ -64,7 +64,7 @@ public class CustomerController {
         return ResponseEntity.ok(response);
     }
 
-    @PutMapping("/customer/{customerId}")
+    @PutMapping("fundingforce/customer/{customerId}")
     public ResponseEntity<Customer> updateCustomer(@RequestBody Customer userInput,@PathVariable Long customerId){
         Customer customers = this.customerRepo.findById(customerId).orElseThrow(() -> new ResourceNotFoundException("Customer does not exist with id : " + customerId));
         customers.setFirstName(userInput.getFirstName());

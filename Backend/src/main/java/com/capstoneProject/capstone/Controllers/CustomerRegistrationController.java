@@ -1,10 +1,12 @@
-package com.capstoneProject.capstone.registration;
+package com.capstoneProject.capstone.Controllers;
 
+import com.capstoneProject.capstone.registration.RegistrationRequest;
+import com.capstoneProject.capstone.registration.RegistrationService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "fundingforce/v1/registration")
+@RequestMapping(path = "fundingforce/registration")
 @AllArgsConstructor
 public class CustomerRegistrationController {
 

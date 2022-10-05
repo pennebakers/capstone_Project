@@ -24,12 +24,12 @@ public class BudgetController {
         this.budgetRepo = budgetRepo;
     }
 
-    @GetMapping({"/budget"})
+    @GetMapping({"fundingforce/budget"})
     public List<Budget> list() {
         return this.budgetRepo.findAll();
     }
 
-    @GetMapping({"/budget/{budgetId}"})
+    @GetMapping({"fundingforce/budget/{budgetId}"})
     public ResponseEntity<Budget> getBudgetById(@PathVariable Long budgetId) {
         Budget budget = (Budget)this.budgetRepo.findById(budgetId).orElseThrow(() -> {
             return new ResourceNotFoundException("Budget does not exist with id : " + budgetId);
@@ -37,12 +37,12 @@ public class BudgetController {
         return ResponseEntity.ok(budget);
     }
 
-    @PostMapping({"/budget"})
+    @PostMapping({"fundingforce/budget"})
     public Budget createBudget(@RequestBody Budget budget) {
         return (Budget)this.budgetRepo.save(budget);
     }
 
-    @DeleteMapping({"/budget/{budgetId}"})
+    @DeleteMapping({"fundingforce/budget/{budgetId}"})
     public ResponseEntity<Map<String, Boolean>> deleteBudget(@PathVariable Long budgetId) {
         Budget var10000 = (Budget)this.budgetRepo.findById(budgetId).orElseThrow(() -> {
             return new ResourceNotFoundException("User not exist with id : " + budgetId);
@@ -53,7 +53,7 @@ public class BudgetController {
         return ResponseEntity.ok(response);
     }
 
-    @PutMapping({"/budget/{budgetId}"})
+    @PutMapping({"fundingforce/budget/{budgetId}"})
     public ResponseEntity<Budget> updateBudget(@RequestBody Budget userInput, @PathVariable Long budgetId) {
         Budget budget = (Budget)this.budgetRepo.findById(budgetId).orElseThrow(() -> {
             return new ResourceNotFoundException("Budget does not exist with id : " + budgetId);

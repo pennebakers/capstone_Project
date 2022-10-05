@@ -37,7 +37,7 @@ public class RegistrationService {
                 )
         );
 
-        String link = "http://localhost:8080/fundingforce/v1/registration/confirm?token=" + token;
+        String link = "http://localhost:8080/fundingforce/registration/confirm?token=" + token;
         emailSender.send(
                 request.getEmail(),
                 buildEmail(request.getFirstName(), link));
