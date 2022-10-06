@@ -6,6 +6,7 @@ import { ViewBudgetComponent } from './view-budget/view-budget.component';
 import { CommonModule } from '@angular/common';
 
 
+
 const routes: Routes = [
                           
                           {path: '', component: HomeComponent},
@@ -14,12 +15,15 @@ const routes: Routes = [
                           
                       ];
 
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+ @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
+    })
+ export class AppRoutingModule {}
+                      
+
+
+
+
+
+

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home-page/home.component';
 import { CreateBudgetComponent } from './create-budget/create-budget.component';
@@ -11,21 +12,42 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserLoginComponent } from './user-login/user-login.component';
 
 
+import { PaymentsPageComponent } from './payments-page/payments-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+
+
+import { FormsModule } from '@angular/forms';
+import { LoanCalculatorComponent } from './loan-calculator/loan-calculator.component';
+
+
+import { CreateAccountComponent } from './create-account/create-account.component';
+
+
 @NgModule({
+
   declarations: [
     AppComponent,
+
     HomeComponent,
     CreateBudgetComponent,
     ViewBudgetComponent,
     UserLoginComponent,
+
+    PaymentsPageComponent,
+    LandingPageComponent,
+    CreateAccountComponent,
+    LoanCalculatorComponent
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgApexchartsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

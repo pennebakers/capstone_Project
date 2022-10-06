@@ -8,7 +8,14 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'Funding Force';
   faCoffee = faCoffee;
   
+
+onSubmit() {
+throw new Error('Method not implemented.');
+}
+ 
+
 }

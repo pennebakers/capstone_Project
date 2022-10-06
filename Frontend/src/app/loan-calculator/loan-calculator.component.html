@@ -1,0 +1,24 @@
+<div class="top-Bar">
+  <h2>{{title}}</h2>
+</div>
+<form  class = container>
+  <div class ='form-control'>
+  <label type = "text">Loan Amount</label>
+  <input [(ngModel)] ='num1' name = 'num1' type ='number'
+  placeholder = 'Please Enter A Number'>
+  <label type = "text">Interest Rate</label>
+  <input [(ngModel)] ='num2' name = 'num2' type ='number'
+  placeholder = 'Enter the Interest Rate %'>
+  <label type = "text">Total Years</label>
+  <input [(ngModel)] ='num3' name = 'num3' type ='number'
+  placeholder = 'Please Enter Years' >
+  </div>
+  <button (click) ="cal()" mat-button-color="primary" class="btn">Calculate</button>
+  <h3>Monthly payments: {{payment}}</h3>
+
+</form>
+<br><br>
+<div class= "chartContainer">
+<apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels"
+[title] = "chartTitle" [dataLabels] = "chartDataLabels" ></apx-chart>
+</div>
