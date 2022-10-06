@@ -37,6 +37,9 @@ public class Customer implements UserDetails {
     @Column(name = "customer_id")
     private Long customerId;
 
+    @Column(name = "user_name")
+    private String userName;
+
     @Column(name = "first_name")
     private String firstName;
 
@@ -57,15 +60,18 @@ public class Customer implements UserDetails {
     @OneToMany(mappedBy = "customers")
     private List<Budget> budgets;
 
-    public Customer(String firstName,
+    public Customer(String userName,
+                    String firstName,
                     String lastName,
-                    String email, String password,
+                    String email,
+                    String password,
                     CustomerRole customerRole) {
+        this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.customerRole = customerRole;
+        this.customerRole = CustomerRole.USER;
     }
 
     @Override

@@ -29,6 +29,7 @@ public class RegistrationService {
         }
         String token = customerService.signUpCustomer(
                 new Customer(
+                        request.getUserName(),
                         request.getFirstName(),
                         request.getLastName(),
                         request.getEmail(),

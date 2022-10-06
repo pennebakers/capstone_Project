@@ -2,6 +2,7 @@ package com.capstoneProject.capstone.security.config;
 
 import com.capstoneProject.capstone.Models.CustomerService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -16,7 +17,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Autowired
     private final CustomerService customerService;
+    @Autowired
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
@@ -24,11 +27,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/fundingforce/registration/**")
-                .permitAll()
-                .anyRequest()
-                .authenticated().and()
-                .formLogin();
+                    .antMatchers("/fundingforce/registration/**").permitAll()
+                    .antMatchers("/fundingforce/login/**").permitAll()
+                    .antMatchers("/fundingforce/home").permitAll()
+                    .anyRequest()
+                        .authenticated()
+                .and()
+                .formLogin()
+                    .loginPage("/fundingfoce/login");
+
     }
 
     @Override
