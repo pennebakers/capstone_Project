@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-root',
@@ -6,8 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  title = 'Funding Force';
+  faCoffee = faCoffee;
+  
+
 onSubmit() {
 throw new Error('Method not implemented.');
 }
-  title = 'Frontend';
+ 
+
 }
