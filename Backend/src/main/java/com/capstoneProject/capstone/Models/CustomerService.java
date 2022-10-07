@@ -18,28 +18,29 @@ import java.util.UUID;
 public class CustomerService implements UserDetailsService {
 
     private final static String CUSTOMER_NOT_FOUND_MSG =
-            "user with email %s not found";
+            "user with username %s not found";
 
     private final CustomerRepo customerRepo;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
     private final ConfirmationTokenService confirmationTokenService;
 
     @Override
-    public UserDetails loadUserByUsername(String email)
+    public UserDetails loadUserByUsername(String userName)
             throws UsernameNotFoundException {
-        return customerRepo.findByEmail(email)
+        return customerRepo.findByUserName(userName)
                 .orElseThrow(() ->
                         new UsernameNotFoundException(
-                                String.format(CUSTOMER_NOT_FOUND_MSG, email)));
+                                String.format(CUSTOMER_NOT_FOUND_MSG, userName)));
     }
 
     public String signUpCustomer(Customer customer){
-        boolean userExists = customerRepo
-                .findByEmail(customer.getEmail())
-                .isPresent();
+        boolean emailExists = customerRepo.findByEmail(customer.getEmail()).isPresent();
+        boolean userNameExists = customerRepo.findByUserName(customer.getUsername()).isPresent();
 
-        if(userExists){
-            throw new IllegalStateException("Email already taken");
+        if(emailExists){
+            throw new IllegalStateException("Email already in use.");
+        } else if(userNameExists){
+            throw new IllegalStateException("Username already taken.");
         }
 
         String encodedPassword = bCryptPasswordEncoder
