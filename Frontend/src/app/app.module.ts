@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
+
 import { HomeComponent } from './home-page/home.component';
 import { CreateBudgetComponent } from './create-budget/create-budget.component';
 import { ViewBudgetComponent } from './view-budget/view-budget.component';
@@ -22,23 +28,22 @@ import { LoanCalculatorComponent } from './loan-calculator/loan-calculator.compo
 
 import { CreateAccountComponent } from './create-account/create-account.component';
 
+import { SavingsCalculatorComponent } from './savings-calculator/savings-calculator.component';
+
 
 @NgModule({
 
   declarations: [
     AppComponent,
-
     HomeComponent,
     CreateBudgetComponent,
     ViewBudgetComponent,
     UserLoginComponent,
-
     PaymentsPageComponent,
     LandingPageComponent,
     CreateAccountComponent,
     LoanCalculatorComponent
-
-
+    SavingsCalculatorComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     FontAwesomeModule,
     FormsModule,
     HttpClientModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
