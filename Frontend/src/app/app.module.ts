@@ -14,6 +14,7 @@ import { LoanCalculatorComponent } from './loan-calculator/loan-calculator.compo
 
 
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { UpdatePasswordPageComponent } from './update-password-page/update-password-page.component';
 
 
 @NgModule({
@@ -22,18 +23,18 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     AppComponent,
     PaymentsPageComponent,
     LandingPageComponent,
-    CreateAccountComponent
-
+    CreateAccountComponent,
+    LoanCalculatorComponent,
+    UpdatePasswordPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgApexchartsModule
   ],
 
-  declarations: [AppComponent, LoanCalculatorComponent, CreateAccountComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgApexchartsModule],
-
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
