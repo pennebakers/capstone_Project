@@ -1,13 +1,35 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateAccountComponent } from './create-account/create-account.component';
+import { HomeComponent } from './home-page/home.component';
+import { CreateBudgetComponent } from './create-budget/create-budget.component';
+import { ViewBudgetComponent } from './view-budget/view-budget.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { CommonModule } from '@angular/common';
+
+
 
 const routes: Routes = [
+                          
+                          {path: '', component: HomeComponent},
+                          {path: 'create-budget', component: CreateBudgetComponent},
+                          {path: 'view-budget', component: ViewBudgetComponent},
+                          {path: 'user-login', component: UserLoginComponent},
+                          
+                      ];
+
+ @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
+    })
+ export class AppRoutingModule {}
+                      
+
+
+
+
+
+
   {path: 'create-account', component: CreateAccountComponent}
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+
