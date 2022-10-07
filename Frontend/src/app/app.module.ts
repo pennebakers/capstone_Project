@@ -1,9 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { NgApexchartsModule } from 'ng-apexcharts';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home-page/home.component';
+import { CreateBudgetComponent } from './create-budget/create-budget.component';
+import { ViewBudgetComponent } from './view-budget/view-budget.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UserLoginComponent } from './user-login/user-login.component';
+
 
 import { PaymentsPageComponent } from './payments-page/payments-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -20,19 +27,27 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 
   declarations: [
     AppComponent,
+
+    HomeComponent,
+    CreateBudgetComponent,
+    ViewBudgetComponent,
+    UserLoginComponent,
+
     PaymentsPageComponent,
     LandingPageComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    LoanCalculatorComponent
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgApexchartsModule,
+    FontAwesomeModule,
+    FormsModule,
+    HttpClientModule
   ],
-
-  declarations: [AppComponent, LoanCalculatorComponent, CreateAccountComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgApexchartsModule],
-
   providers: [],
   bootstrap: [AppComponent],
 })
