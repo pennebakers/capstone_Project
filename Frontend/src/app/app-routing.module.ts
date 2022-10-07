@@ -1,15 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home-page/home.component';
+import { CreateBudgetComponent } from './create-budget/create-budget.component';
+import { ViewBudgetComponent } from './view-budget/view-budget.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { CommonModule } from '@angular/common';
 
-import { LoanCalculatorComponent } from './loan-calculator/loan-calculator.component';
-
-const routes: Routes = [{ path: 'loan', component: LoanCalculatorComponent }];
-
-import { CreateAccountComponent } from './create-account/create-account.component';
 
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
+const routes: Routes = [
+                          
+                          {path: '', component: HomeComponent},
+                          {path: 'create-budget', component: CreateBudgetComponent},
+                          {path: 'view-budget', component: ViewBudgetComponent},
+                          {path: 'user-login', component: UserLoginComponent},
+                          
+                      ];
+
+ @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
+    })
+ export class AppRoutingModule {}
+                      
+
+
+
+
+
+
