@@ -13,6 +13,11 @@ export class AppComponent {
   faCoffee = faCoffee;
   
 
+
+  submitted : any;
+  f: any;
+  loading: any;
+
 onSubmit() {
 throw new Error('Method not implemented.');
 }
