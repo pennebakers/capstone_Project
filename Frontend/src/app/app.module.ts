@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
+
 import { HomeComponent } from './home-page/home.component';
 import { CreateBudgetComponent } from './create-budget/create-budget.component';
 import { ViewBudgetComponent } from './view-budget/view-budget.component';
@@ -23,23 +29,24 @@ import { LoanCalculatorComponent } from './loan-calculator/loan-calculator.compo
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { UpdatePasswordPageComponent } from './update-password-page/update-password-page.component';
 
+import { SavingsCalculatorComponent } from './savings-calculator/savings-calculator.component';
+
 
 @NgModule({
 
   declarations: [
     AppComponent,
-
     HomeComponent,
     CreateBudgetComponent,
     ViewBudgetComponent,
     UserLoginComponent,
-
     PaymentsPageComponent,
     LandingPageComponent,
     CreateAccountComponent,
+    LoanCalculatorComponent
+    SavingsCalculatorComponent
     LoanCalculatorComponent,
     UpdatePasswordPageComponent
-
   ],
   imports: [
     BrowserModule,
@@ -48,6 +55,7 @@ import { UpdatePasswordPageComponent } from './update-password-page/update-passw
     FontAwesomeModule,
     FormsModule,
     HttpClientModule
+    FormsModule
   ],
     FormsModule,
     NgApexchartsModule
