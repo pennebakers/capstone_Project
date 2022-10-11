@@ -4,3 +4,12 @@
   overflow-x: hidden;
   height: 100vh;
 }
+
+h3{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.space{
+  margin-left: 5%;
+}

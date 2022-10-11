@@ -10,9 +10,10 @@
     overflow: auto;
     min-height: 30px;
     text-align: center;
-    background-color: #2D6A4F;
+    background-color: #74C69D;
     justify-content: center;
     align-items: center;
+    border-radius: 10%;
   }
 
   .Savings label {
@@ -47,7 +48,6 @@
     letter-spacing: 2px;
     color: seashell;
     text-transform: uppercase;
-    font-family:'Times New Roman', Times, serif;
     text-align: center;
     border: none
   }
