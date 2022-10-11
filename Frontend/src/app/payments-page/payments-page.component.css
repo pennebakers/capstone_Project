@@ -2,6 +2,7 @@
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+    color:#1B4332;
 }
 
 .btn-payment{
@@ -15,16 +16,53 @@
 }
 
 .table-cell{
-    
+
     width: 150px;
     padding: 5px;
-    
+
 }
 
 .navbar-div{
     margin-bottom: 50px;
 }
 
-.btn-create{
-    margin-left: 30px;
+
+.btn-new{
+  background-color: #95D5B2;
+  width: 30%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.stan{
+  background-color:  #95D5B2;
+  border-radius: 10%;
+
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  border-color:  #95D5B2;
+  color: whitesmoke;
+  margin: 5px;
+
+}
+
+.background-color{
+  background: linear-gradient(75deg, #D8F3DC, #1B4332);
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+
+.top-Bar{
+  display: flex;
+  width: 100%;
+  height:60px;
+
+  /* Horizontally and vertically center */
+  justify-content: center;
+  align-items: center;
 }

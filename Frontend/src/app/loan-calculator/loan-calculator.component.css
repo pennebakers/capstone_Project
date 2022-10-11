@@ -4,8 +4,10 @@
 }
 
 .form-control {
+  background-color: #95D5B2;
   margin: 20px;
-  max-width: 500px;
+  width: 60%;
+  max-width: 400px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
@@ -32,7 +34,7 @@
   display: flex;
   width: 100%;
   height:60px;
-  background: linear-gradient(75deg, #274B9F, #EBF5FD);
+
   /* Horizontally and vertically center */
   justify-content: center;
   align-items: center;
@@ -45,7 +47,6 @@ h2{
 }
 
 .btn {
-  display: inline-block;
   background: #000;
   color: #fff;
   border: none;
@@ -58,6 +59,7 @@ h2{
   font-family: inherit;
 }
 
+
 .chartContainer {
   width: 500px;
   height: 500px;
@@ -68,4 +70,10 @@ h2{
   min-height: 300px;
   justify-content: center;
   align-items: center;
+}
+
+
+.background-color{
+  background: linear-gradient(75deg, #D8F3DC, #1B4332);
+  overflow-x: hidden;
 }
