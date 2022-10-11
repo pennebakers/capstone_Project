@@ -9,10 +9,12 @@ import { PaymentsPageComponent } from './payments-page/payments-page.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { LoanCalculatorComponent } from './loan-calculator/loan-calculator.component';
 import { SavingsCalculatorComponent } from './savings-calculator/savings-calculator.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 
 const routes: Routes = [
+  {path: '', component: LandingPageComponent},
   {path: 'fundingforce/registration', component: CreateAccountComponent},
     {path: 'fundingforce/home', component: HomeComponent},
     {path: 'create-budget', component: CreateBudgetComponent},
