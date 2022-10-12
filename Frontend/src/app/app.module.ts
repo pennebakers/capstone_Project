@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
-
 import { AppComponent } from './app.component';
-
 import { HomeComponent } from './home-page/home.component';
 import { CreateBudgetComponent } from './create-budget/create-budget.component';
 import { ViewBudgetComponent } from './view-budget/view-budget.component';
@@ -52,7 +49,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

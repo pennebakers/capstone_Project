@@ -15,7 +15,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
-  {path: 'fundingforce/registration', component: CreateAccountComponent},
+  {path: 'fundingforce/registration', component: CreateAccountComponent}, //create account here
     {path: 'fundingforce/home', component: HomeComponent},
     {path: 'create-budget', component: CreateBudgetComponent},
     {path: 'view-budget', component: ViewBudgetComponent},

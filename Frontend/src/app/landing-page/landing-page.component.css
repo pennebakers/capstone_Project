@@ -7,8 +7,10 @@ nav{
     margin: 0 auto;
     height: 100px;
     padding: 0 20px;
-}
-
+}/*
+//first name
+//lst name
+//email */
 .logo{
     width: 80px;
     height: 80px;
@@ -32,4 +34,8 @@ nav{
 .btn{
     margin: 12px;
     padding: 12px;
+}
+.background-color{
+  background: linear-gradient(75deg, #D8F3DC, #1B4332);
+  overflow-x: hidden;
 }
