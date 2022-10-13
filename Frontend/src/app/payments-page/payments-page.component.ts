@@ -22,6 +22,7 @@ export class PaymentsPageComponent implements OnInit {
   getBudgetsList(){
     this.budgetService.getBudgets().subscribe(data => {
       this.budgets = data;
+      console.log(this.budgets);
     })
   }
 
@@ -29,6 +30,10 @@ export class PaymentsPageComponent implements OnInit {
     this.budgetService.deleteBudget(budget_id).subscribe(data => {
       this.getBudgetsList();
     })
+  }
+
+  viewBudget(budgetId: number){
+    this.router.navigate(['view-budget', budgetId]);
   }
 
 }

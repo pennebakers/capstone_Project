@@ -15,12 +15,16 @@ export class BudgetService {
     return this.httpClient.get<Budget[]>(`${this.baseURL}/${customers_customer_id}`);
   }
 
+  getBudgetByID(budgetId: number): Observable<Budget[]>{
+    return this.httpClient.get<Budget[]>(`${this.baseURL}/${budgetId}`);
+  }
+
   getBudgets(): Observable<Budget[]>{
     return this.httpClient.get<Budget[]>(`${this.baseURL}`);
   }
 
-  createBudget(budget: Budget, customers_customer_id: number): Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}/${customers_customer_id}`, budget);
+  createBudget(budget: Budget): Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`, budget);
   }
 
   updateBudget(budget_id: number, budget: Budget): Observable<Object>{
