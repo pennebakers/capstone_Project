@@ -60,7 +60,7 @@ public class BudgetController {
         });
         budget.setGoals(userInput.getGoals());
         budget.setIncome(userInput.getIncome());
-        budget.setExpenses(userInput.getExpenses());
+        budget.setTotalDue(userInput.getTotalDue());
         budget.setSavings(userInput.getSavings());
         Budget updateUser = (Budget)this.budgetRepo.save(budget);
         return ResponseEntity.ok(updateUser);
