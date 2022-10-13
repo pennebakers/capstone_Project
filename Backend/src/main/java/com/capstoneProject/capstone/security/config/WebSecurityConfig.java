@@ -30,6 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/fundingforce/registration/**").permitAll()
                     .antMatchers("/fundingforce/login/**").permitAll()
                     .antMatchers("/fundingforce/home").permitAll()
+                    .antMatchers("/fundingforce/**").permitAll()
                     .anyRequest()
                         .authenticated()
                 .and()
