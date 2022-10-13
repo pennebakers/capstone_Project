@@ -1,5 +1,5 @@
 export class Budget{
-    budget_id: number | undefined;
+    budgetId!: number;
     expenses: number | undefined;
     goals: string | undefined;
     income: number | undefined;

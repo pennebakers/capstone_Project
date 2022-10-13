@@ -15,6 +15,10 @@ export class BudgetService {
     return this.httpClient.get<Budget[]>(`${this.baseURL}/${customers_customer_id}`);
   }
 
+  getBudgetByID(budgetId: number): Observable<Budget[]>{
+    return this.httpClient.get<Budget[]>(`${this.baseURL}/${budgetId}`);
+  }
+
   getBudgets(): Observable<Budget[]>{
     return this.httpClient.get<Budget[]>(`${this.baseURL}`);
   }

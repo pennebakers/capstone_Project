@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'fundingforce/registration', component: CreateAccountComponent},
     {path: 'fundingforce/home', component: HomeComponent},
     {path: 'create-budget', component: CreateBudgetComponent},
-    {path: 'view-budget', component: ViewBudgetComponent},
+    {path: 'view-budget/:budgetId', component: ViewBudgetComponent},
     {path: 'fundingforce/login', component: UserLoginComponent},
     {path: 'loan-calculator', component: LoanCalculatorComponent},
     {path: 'savings-calculator', component: SavingsCalculatorComponent},

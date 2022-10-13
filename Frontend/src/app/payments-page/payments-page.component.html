@@ -27,9 +27,9 @@
               <td>$5000</td>
             </tr>
           </table>
-          <a routerLink = "/view-budget" class="btn btn-primary btn-payment">View</a>
+          <a (click) = "viewBudget(budget.budgetId)" class="btn btn-primary btn-payment">View</a>
           <a routerLink="/create-budget" class="btn btn-secondary btn-payment">Edit</a>
-          <a href="#" class="btn btn-danger btn-payment">Delete</a>
+          <a (click) = "deleteBudgetByID(budget.budgetId)" class="btn btn-danger btn-payment">Delete</a>
         </div>
     </div>
   </div>
