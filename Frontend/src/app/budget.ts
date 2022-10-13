@@ -1,6 +1,8 @@
 export class Budget{
     budgetId!: number;
-    expenses: number | undefined;
+    lastAmountPaid: number | undefined;
+    totalDue: number | undefined;
+    interest: number | undefined;
     goals: string | undefined;
     income: number | undefined;
     payments: number | undefined;

@@ -31,14 +31,20 @@ public class Budget {
     @Column(name = "income")
     private Double income;
 
-    @Column(name = "expenses")
-    private Double expenses;
+    @Column(name = "lastAmountPaid")
+    private Double lastAmountPaid;
+
+    @Column(name = "totalDue")
+    private Double totalDue;
 
     @Column(name = "payments")
     private double payments;
 
     @Column(name = "savings")
     private Double savings;
+
+    @Column(name= "interest")
+    private int interest;
 
     @ManyToOne
     private Customer customers;
@@ -47,13 +53,15 @@ public class Budget {
 
     }
 
-    public Budget(Long budgetId, String goals, Double income, Double expenses, Double payments, Double savings) {
+    public Budget(Long budgetId, String goals, Double income, Double totalDue, Double payments, Double savings, int interest, Double lastAmountPaid) {
         this.budgetId = budgetId;
         this.goals = goals;
         this.income = income;
-        this.expenses = expenses;
+        this.totalDue = totalDue;
         this.payments = payments;
         this.savings = savings;
+        this.interest = interest;
+        this.lastAmountPaid = lastAmountPaid;
     }
 }
 
