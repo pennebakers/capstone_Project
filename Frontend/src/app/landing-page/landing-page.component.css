@@ -38,4 +38,5 @@ nav{
 .background-color{
   background: linear-gradient(75deg, #D8F3DC, #1B4332);
   overflow-x: hidden;
+  height: 100vh;
 }
