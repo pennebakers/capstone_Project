@@ -1,11 +1,10 @@
-
-
-
-  
+<div class='background-color' >
+  <h1 class = "top-Bar"> Payment</h1>
     <div class="row">
-      <a href="/create-budget" class="btn btn-create btn-primary btn-payment">New</a>
+      <a href="/create-budget" class=" btn btn-new" >New</a>
     </div>
 
+<br>
 
 
 
@@ -13,6 +12,10 @@
       <div class="card border-secondary mb-3 w-75 text-center" *ngFor="let budget of budgets">
         <div class="card-body">
           <h5 class="card-title"><u>{{budget.goals}}</u></h5>
+  <div class = "column">
+      <div class="card border-secondary mb-3 w-75 text-center " style = "background-color:#74C69D">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Car</strong></h5>
           <table class="table-center">
             <tr>
               <th class="table-cell">Next Pay</th>
@@ -27,10 +30,42 @@
               <td>$5000</td>
             </tr>
           </table>
+<<<<<<< HEAD
           <a (click) = "viewBudget(budget.budgetId)" class="btn btn-primary btn-payment">View</a>
           <a routerLink="/create-budget" class="btn btn-secondary btn-payment">Edit</a>
           <a (click) = "deleteBudgetByID(budget.budgetId)" class="btn btn-danger btn-payment">Delete</a>
+=======
+          <a routerLink = "/view-budget" class="btn btn-success btn-payment ">View</a>
+          <a routerLink="/create-budget" class="btn btn-success btn-payment">Edit</a>
+          <a href="#" class="btn btn-success btn-payment">Delete</a>
+>>>>>>> 615a5967e28ff4f938f968d851f89b5bdcc50d96
         </div>
     </div>
   </div>
+
+    <div class="column ">
+      <div class="card border-secondary mb-3 w-75 text-center " style = "background-color:#74C69D">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Car</strong></h5>
+          <table class="table-center">
+            <tr>
+              <th class="table-cell">Next Pay</th>
+              <th class="table-cell">Next Balance</th>
+              <th class="table-cell">%</th>
+              <th class="table-cell">Total</th>
+            </tr>
+            <tr>
+              <td>$500</td>
+              <td>$500</td>
+              <td>8%</td>
+              <td>$5000</td>
+            </tr>
+          </table>
+          <a routerLink = "/view-budget" class="btn btn-success btn-payment ">View</a>
+          <a routerLink="/create-budget" class="btn btn-success btn-payment">Edit</a>
+          <a href="#" class="btn btn-success btn-payment">Delete</a>
+        </div>
+    </div>
+</div>
+</div>
 

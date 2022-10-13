@@ -1,7 +1,8 @@
-<div class="top-Bar">
+<div class = "background-color">
+<div class="top-Bar" >
   <h2>{{title}}</h2>
 </div>
-<form  class = container>
+<form  class = "container">
   <div class ='form-control'>
   <label type = "text">Loan Amount</label>
   <input [(ngModel)] ='num1' name = 'num1' type ='number'
@@ -13,10 +14,13 @@
   <input [(ngModel)] ='num3' name = 'num3' type ='number'
   placeholder = 'Please Enter Years' >
   </div>
-  <button (click) ="cal()" mat-button-color="primary" class="btn">Calculate</button>
-  <h3>Monthly payments: {{payment}}</h3>
-
 </form>
+<div class = "top-Bar">
+  <button (click) ="cal()" mat-button-color="primary" class="btn">Calculate</button>
+  <br>
+  <h3>Monthly payments: {{payment}}</h3>
+  </div>
+
 <br><br>
 <div class= "chartContainer">
 <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels"

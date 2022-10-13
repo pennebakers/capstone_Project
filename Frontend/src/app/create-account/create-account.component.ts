@@ -1,4 +1,8 @@
+import { Registration } from './../registration';
+import { FundingForceService } from './../funding-force.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-create-account',
@@ -7,13 +11,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor() { }
 
-  onSubmit() {
-    throw new Error('Method not implemented.');
-    }
+  registration: Registration = new Registration();
+
+  constructor(private FundingForceService: FundingForceService,
+    private router:Router) { }
 
   ngOnInit(): void {
+  }
+  saveAccount(){
+    this.FundingForceService.createAccount(this.registration).subscribe(data =>{
+      data;
+      this.goToHomePage();
+    },
+    error =>console.log(error));
+  }
+//
+  goToHomePage(){
+    this.router.navigate(['/fundingforce/home'])
+  }
+
+  onSubmit(){
+      console.log(this.registration);
+      this.saveAccount();
   }
 
 }
