@@ -4,7 +4,6 @@ import { HomeComponent } from './home-page/home.component';
 import { CreateBudgetComponent } from './create-budget/create-budget.component';
 import { ViewBudgetComponent } from './view-budget/view-budget.component';
 import { UserLoginComponent } from './user-login/user-login.component';
-import { CommonModule } from '@angular/common';
 import { PaymentsPageComponent } from './payments-page/payments-page.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { LoanCalculatorComponent } from './loan-calculator/loan-calculator.component';
