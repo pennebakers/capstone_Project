@@ -2,6 +2,7 @@
     display: table-cell;
     width: 490px;
     text-align: center;
+    
   }
   
  .Savings {
@@ -55,6 +56,7 @@
     text-align: center;
     border: 5px solid #000000
   }
+<<<<<<< Updated upstream
   
   .btn {
     position: absolute;
@@ -62,20 +64,26 @@
     left: 38%;
     
     display: inline-block;
+=======
+
+ 
+  .btn {
+>>>>>>> Stashed changes
     background: #000;
-    color: rgb(39, 241, 69);
+    color: #fff;
     border: none;
-    padding: 10px;
-    margin: -30px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 15px;
     font-family: inherit;
-    text-align: center;
+    margin-left: -10%;
   }
 
   h3{
+<<<<<<< Updated upstream
     position: absolute;
     top: 87%;
     left: 50%;
@@ -83,3 +91,19 @@
     text-align: center;
     font-size: 30px;
   }
+=======
+    margin-top: 1%;
+    letter-spacing: 2px;
+    color: seashell;
+    text-transform: uppercase;
+    text-align: left;
+    border: none
+  }
+
+
+  .background-color{
+    background: linear-gradient(75deg, #D8F3DC, #1B4332);
+    overflow-x: hidden;
+    height: 100vh;
+  }
+>>>>>>> Stashed changes

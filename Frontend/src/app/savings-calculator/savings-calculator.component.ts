@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApexChart, ApexDataLabels, ApexNonAxisChartSeries, ApexTitleSubtitle } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-savings-calculator',

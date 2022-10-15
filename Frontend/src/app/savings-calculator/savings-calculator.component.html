@@ -16,7 +16,12 @@
         <label type="text">Annual Percentage Yield: %</label>
         <input [(ngModel)]= "apy" type="number"  name="apy" placeholder="apy">
     </div>
-    <button (click) ="cal()" mat-button-color="primary" class='btn'>Calculate: </button>
-<h3>${{sum}}</h3>
+    <div class = "top-Bar">
+    <button (click) ="cal()" mat-button-color="primary" class='btn'>Calculate:</button>
+    <br>
+    <h3>${{sum}}</h3>
+    </div>
+    <br><br>
+    
 </form>
 
